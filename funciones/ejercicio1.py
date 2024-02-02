@@ -1,9 +1,12 @@
-factura=float(input("Ingrese la cantidad: "))
-iva=float(input("Ingrese el iva: "))
-if iva == factura:
-    iva*factura
-else:
-    iva*0.21
+def factura(cantidad_no_iva, porcentaje_iva=21):
+    iva = cantidad_no_iva * (porcentaje_iva / 100)
+    total = cantidad_no_iva + iva
+    return total
 
-print(factura+iva)
+def main():
+    cantidad_no_iva = float(input("cantidad sin: "))
+    porcentaje_iva = float(input("porcentaje (Enter 21%): ") or 21)
+    iva = factura(cantidad_no_iva, porcentaje_iva)
+    print(f"El total es: {iva}")
 
+main()
