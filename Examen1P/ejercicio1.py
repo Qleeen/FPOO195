@@ -1,4 +1,7 @@
 palabra = input("Ingrese una palabra: ")
 lista_de_caracteres = list(palabra)
+letra= + lista_de_caracteres[0]
 
-print(lista_de_caracteres)
+
+
+
