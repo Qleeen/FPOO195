@@ -1,6 +1,12 @@
-palabra = input("Ingrese una palabra: ")
+palabra = str(input("Ingrese una palabra: "))
+letra = 0
 lista_de_caracteres = list(palabra)
-letra= + lista_de_caracteres[0]
+for i in lista_de_caracteres:
+    letra += 1
+    print('letra', i)
+
+
+
 
 
 
