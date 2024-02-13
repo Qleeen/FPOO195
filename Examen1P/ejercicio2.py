@@ -11,3 +11,6 @@ while menu != 3:
     else:
         print('Opcion no valida')
     menu= int(input('1. Convertir a Farenheit\n2. Convertir a Kelvin\n3. Salir'))
+    
+    
+print('Adios')
