@@ -1,11 +1,14 @@
 class Personaje:
     
 #atributo de personaje
-    especie='Humano'
-    nombre= 'John'
-    altura= 2.18
+#Declaramos el constructor para crear los objetos
+
+    def __init__(self,esp,nom,alt):
+        self.especie= esp
+        self.nombre= nom
+        self.altura= alt
     
-#metodos del personaje
+    #metodos del personaje
     def correr(self,estado):
         if(estado):
             print('el personaje' + self.nombre+' esta corriendo')
