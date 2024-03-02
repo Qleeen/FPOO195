@@ -19,14 +19,20 @@ Nemesis = Personaje(especieN,nombreN,alturaN)
 Arma= Armas()
 
 #usamos los atributos Spartan
-print(Spartan.nombre)
-print(Spartan.especie)
-print(Spartan.altura)
+print(Spartan.getNombre())
+print(Spartan.getEspecie())
+print(Spartan.getAltura())
+
+#usamos los atributos del nemesis
+print(Nemesis.getNombre())
+print(Nemesis.getEspecie())
+print(Nemesis.getAltura())
 
 #usamos los metodos del spartan
 Spartan.correr(False)
 Spartan.lanzarGranada()
 
 #usamos los metodos del arma
-Arma.seleccionarArma(Spartan.nombre)
+Arma.seleccionarArma(Spartan.getNombre())
 Arma.recargarArma(65)
+
