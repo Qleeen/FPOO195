@@ -1,11 +1,12 @@
 class Persona:
-    def __init__(self, nombre, apellidoPaterno, apellidoMaterno, añoNacimiento, Carrera, AñoCurso):
+    def __init__(self, AñoCurso, añoNacimiento, nombre, apellidoPaterno, apellidoMaterno, Carrera):
+        self.AñoCurso = AñoCurso
+        self.añoNacimiento = añoNacimiento
         self.nombre = nombre
         self.apellidoPaterno = apellidoPaterno
         self.apellidoMaterno = apellidoMaterno
-        self.añoNacimiento = añoNacimiento
         self.Carrera = Carrera
-        self.AñoCurso = AñoCurso    
+          
     def generarMatricula(self):
-        matricula = self.nombre[0:1] + self.apellidoPaterno[0:1] + self.apellidoMaterno[0:1] + str(self.añoNacimiento) + self.Carrera[0:3]  + str(self.AñoCurso)
+        matricula = str(self.AñoCurso) + str(self.añoNacimiento) + self.nombre[0:1] + self.apellidoPaterno[0:1] + self.apellidoMaterno[0:1] + self.Carrera[0:3]
         return matricula
