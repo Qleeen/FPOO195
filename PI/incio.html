@@ -1,24 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+        background-color: #ffffff; 
+    }
+    .bottom-section {
+        background-color: #4169E1; 
+        padding: 50px 0;
+        color: #ffffff; 
+    }
+    .bottom-section p{
+        font-size: 10px;
+
+    }
+    .bottom-section h3 {
+        font-size: 12px;
+
+    }
+    p {
+        text-align: justify;
+    }
+</style>
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <h1>Welcome to Learn Sign Language!</h1>
-        <p>Start your journey to learn sign language and communicate with the deaf community.</p>
-        <div class="row">
-            <div class="col-md-6">
-                <img src="sign-language-image.jpg" alt="Sign Language Image" class="img-fluid">
-            </div>
-            <div class="col-md-6">
-                <h2>About Us</h2>
-                <p>We are dedicated to providing high-quality resources and courses to help you learn sign language effectively.</p>
-                <a href="courses.html" class="btn btn-primary">Explore Courses</a>
-            </div>
-        </div>
+      <a class="navbar-brand" href="#">SIGNASENSE</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 text-center">
+        <h1 class="mb-4">¡Bienvenido a SIGNASENSE!</h1>       
+        <p class="text-center">¿Estás listo para empezar a aprender el lenguaje de señas?</p>
+        <a href="#" class="btn btn-primary btn-lg mr-3">Iniciar Sesión</a>
+        <a href="#" class="btn btn-secondary btn-lg">Regístrate</a>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-4">
+        <h3>¿Por qué aprender lenguaje de señas?</h3>
+        <p>El lenguaje de señas es una forma de comunicación utilizada por personas sordas o con problemas de audición. Aprender lenguaje de señas puede ayudarte a comunicarte mejor y a comprender mejor a las personas sordas en tu comunidad.</p>
+      </div>
+      <div class="col-md-4">
+        <h3>Lecciones interactivas</h3>
+        <p>Accede a nuestras lecciones interactivas diseñadas para ayudarte a aprender el lenguaje de señas de manera fácil y divertida.</p>
+      </div>
+      <div class="col-md-4">
+        <h3>¿Cómo funciona?</h3>
+        <p>Regístrate gratis, elige tu nivel de habilidad y comienza a aprender con nuestras lecciones paso a paso. ¡Es así de simple!</p>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+  <div class="bottom-section">
+    <div class="container">
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <h3>Sobre nosotros</h3>
+          <p>SIGNASENSE es una plataforma dedicada a enseñar el lenguaje de señas de manera accesible y efectiva. Nuestro objetivo es proporcionar herramientas educativas que ayuden a construir puentes de comunicación entre personas sordas y oyentes.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Referencias</h3>
+          <p>Nuestro contenido se basa en la experiencia de profesionales en lenguaje de señas y en las necesidades de la comunidad sorda. Trabajamos en colaboración con expertos para garantizar la calidad y precisión de nuestras lecciones.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Contacto</h3>
+          <p>Para más información o para contactarnos, por favor envía un correo electrónico a contacto@signasense.com. Estamos aquí para ayudarte en tu viaje de aprendizaje de lenguaje de señas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
