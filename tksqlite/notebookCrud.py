@@ -1,48 +1,57 @@
-from tkinter import *
+from  tkinter import *
 from tkinter import ttk
 import tkinter as tk
+from Controlador import *
 
-#1. crear ventana
-ventana  = Tk()
-ventana .title("CRUD de Usuarios")
-ventana.geometry("500x300")
+# Llamamos a nuestra clase Controlador
+objControlador = Controlador()
 
-#2. preparar el notebook para las pestañas
-panel= ttk.Notebook(ventana)
+def ejecutaInsert():
+    objControlador.insertUsuario(var1.get(), var2.get(), var3.get())
+    
+
+#1 crear la ventana
+Ventana = Tk()
+Ventana.title("CRUD de usuarios")
+Ventana.geometry("500x300")
+
+#2. preparar el notebook para pestañas
+panel=ttk.Notebook(Ventana)
 panel.pack(fill='both', expand="yes")
 
-#3. definimos las pestañas del notebook
-pestana1 = ttk.Frame(panel)
-pestana2 = ttk.Frame(panel)
-pestana3 = ttk.Frame(panel)
-pestana4 = ttk.Frame(panel)
-pestana5 = ttk.Frame(panel)
+#3. Pestañas que ocuparemos para el panel
+pestana1=ttk.Frame(panel)
+pestana2=ttk.Frame(panel)
+pestana3=ttk.Frame(panel)
+pestana4=ttk.Frame(panel)
+pestana5=ttk.Frame(panel)
 
-#4. agregamos las pestañas
-panel.add(pestana1, text="Crear Usuario")
-panel.add(pestana2, text="Buscar Usuario")
-panel.add(pestana3, text="Consultar Usuarios")
-panel.add(pestana4, text="Editar Usuario")
-panel.add(pestana5, text="Eliminar Usuario")
+#4 Agregaremos las pesatañas que queremos crear al panel
+panel.add(pestana1,text="Crear Usuario")
+panel.add(pestana2,text="Buscar Usuario")
+panel.add(pestana3,text="Consultar Usuarios")
+panel.add(pestana4,text="Editar Usuario")
+panel.add(pestana5,text="Eliminar Usuario")
 
-#5 formulario insert
-Label(pestana1, text="Registro de Usuarios", fg="blue", font=("modern",18)).pack()
-var1 = tk.StringVar()
+#5. Formulario de Insert 
+Label(pestana1, text="Registro de Usuarios",fg="blue", font=("Modern",18)).pack()
 
-Label(pestana1, text="Nombre:").pack()
-Entry(pestana1, textvariable=var1).pack()
 var1= tk.StringVar()
+Label(pestana1,text="Nombre:").pack()
+Entry(pestana1,textvariable=var1).pack()
 
-var2 = tk.StringVar()
-Label(pestana1, text="Correo:").pack()
-Entry(pestana1, textvariable=var1).pack()
 var2= tk.StringVar()
+Label(pestana1,text="Correo:").pack()
+Entry(pestana1,textvariable=var2).pack()
 
-var2 = tk.StringVar()
-Label(pestana1, text="Contrasena:").pack()
-Entry(pestana1, textvariable=var1).pack()
-var2= tk.StringVar()
+var3= tk.StringVar()
+Label(pestana1,text="Contrasena:").pack()
+Entry(pestana1,textvariable=var3).pack()
 
-Button(pestana1, text="Guardar usuario").pack()
+#En el button de guardar usuario colocaremos el commando que realizara todo el proceso del usuario
+Button(pestana1, text="Guardar usuario", command=ejecutaInsert).pack()
 
-ventana.mainloop()
+
+
+Ventana.mainloop()
+
